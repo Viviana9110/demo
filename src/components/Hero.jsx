@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <>
-    <div class="min-h-screen bg-[linear-gradient(135deg,#1B82C2_0%,#438AAE_30%,#EF8224_65%,#1D1D1B_100%)]">
+    <div class="min-h-screen bg-[url('https://images.unsplash.com/photo-1544989164-22f292ae11b7?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center h-screen">
+     
 <section
         id="home"
         className="h-screen bg-cover bg-center flex flex-col justify-center items-center text-white text-center"
