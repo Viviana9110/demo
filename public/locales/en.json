@@ -1,0 +1,75 @@
+{
+  "navbar": {
+    "home": "Home",
+    "destinos": "Destinations",
+    "about": "About Us",
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "Discover your next destination",
+    "subtitle": "Travel with us to the best places in the world",
+    "form": {
+      "destination": "Destination",
+      "checkin": "Check in",
+      "checkout": "Check out",
+      "guests": "Guests",
+      "search": "Search"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "paragraph1": "We are a travel agency committed to offering you the best tourist experiences in Colombia and around the world. Our goal is to ensure every client enjoys a safe, comfortable trip full of unforgettable memories.",
+    "paragraph2": "With a team passionate about tourism, we work every day to provide personalized packages, close attention, and service that makes your trip much more than just a vacation."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "message": "Message",
+      "message_placeholder": "Write your message...",
+      "button": "Send message"
+    },
+    "info": {
+      "address": "Address",
+      "address_value": "123 Street, Bogotá, Colombia",
+      "phone": "Phone",
+      "phone_value": "+57 300 123 4567",
+      "mail": "Email",
+      "mail_value": "info@travelagency.com"
+    }
+  },
+  "destinations": {
+    "title": "Featured Destinations",
+    "subtitle": "Discover our handpicked selection of exceptional places around the world, offering unparalleled luxury and unforgettable experiences.",
+    "view_more": "View more"
+  },
+  "testimonials": {
+    "title": "What Our Guests Say",
+    "subtitle": "Discover why travelers consistently choose us for their unique and exclusive experiences."
+  },
+  "footer": {
+    "description": "Discover the world's most extraordinary places to stay, from boutique hotels to luxury villas and private islands.",
+    "company": "COMPANY",
+    "support": "SUPPORT",
+    "rights": "All rights reserved.",
+    "links": {
+      "about": "About",
+      "careers": "Careers",
+      "press": "Press",
+      "blog": "Blog",
+      "partners": "Partners",
+      "terms": "Terms and Conditions",
+      "privacy": "Privacy Policy",
+      "cancellation": "Cancellation Policy",
+      "payment": "Payment Policy",
+      "code": "Code of Conduct",
+      "privacy_short": "Privacy",
+      "terms_short": "Terms",
+      "sitemap": "Sitemap"
+    }
+  }
+}

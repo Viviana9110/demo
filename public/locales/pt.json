@@ -1,0 +1,75 @@
+{
+  "navbar": {
+    "home": "Início",
+    "destinos": "Destinos",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "login": "Entrar"
+  },
+  "hero": {
+    "title": "Descubra o seu próximo destino",
+    "subtitle": "Viaje conosco para os melhores lugares do mundo",
+    "form": {
+      "destination": "Destino",
+      "checkin": "Check in",
+      "checkout": "Check out",
+      "guests": "Hóspedes",
+      "search": "Buscar"
+    }
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "paragraph1": "Somos uma agência de viagens comprometida em oferecer as melhores experiências turísticas na Colômbia e no mundo. Nosso objetivo é garantir que cada cliente desfrute de uma viagem segura, confortável e cheia de lembranças inesquecíveis.",
+    "paragraph2": "Com uma equipe apaixonada por turismo, trabalhamos todos os dias para oferecer pacotes personalizados, atendimento próximo e um serviço que torna sua viagem muito mais do que simples férias."
+  },
+  "contact": {
+    "title": "Fale Conosco",
+    "form": {
+      "name": "Nome",
+      "name_placeholder": "Seu nome",
+      "email": "E-mail",
+      "email_placeholder": "seu@email.com",
+      "message": "Mensagem",
+      "message_placeholder": "Escreva sua mensagem...",
+      "button": "Enviar mensagem"
+    },
+    "info": {
+      "address": "Endereço",
+      "address_value": "Rua 123 #45-67, Bogotá, Colômbia",
+      "phone": "Telefone",
+      "phone_value": "+57 300 123 4567",
+      "mail": "E-mail",
+      "mail_value": "info@agenciadeviagens.com"
+    }
+  },
+  "destinations": {
+    "title": "Destinos em destaque",
+    "subtitle": "Descubra nossa seleção exclusiva de lugares excepcionais em todo o mundo, oferecendo luxo incomparável e experiências inesquecíveis.",
+    "view_more": "Ver mais"
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "subtitle": "Descubra por que os viajantes nos escolhem para experiências únicas e exclusivas."
+  },
+  "footer": {
+    "description": "Descubra os lugares mais extraordinários do mundo para se hospedar, desde hotéis boutique até vilas de luxo e ilhas privadas.",
+    "company": "EMPRESA",
+    "support": "SUPORTE",
+    "rights": "Todos os direitos reservados.",
+    "links": {
+      "about": "Sobre",
+      "careers": "Carreiras",
+      "press": "Imprensa",
+      "blog": "Blog",
+      "partners": "Parceiros",
+      "terms": "Termos e Condições",
+      "privacy": "Política de Privacidade",
+      "cancellation": "Política de Cancelamento",
+      "payment": "Política de Pagamento",
+      "code": "Código de Conduta",
+      "privacy_short": "Privacidade",
+      "terms_short": "Termos",
+      "sitemap": "Mapa do site"
+    }
+  }
+}
