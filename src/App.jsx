@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from "./components/WhatsAppButton";
 import About from './components/About';
 import Contact from './components/Contact';
+import Destination from './components/Destination';
 
 
 const App = () => {
@@ -20,8 +21,7 @@ const App = () => {
         <Route path='/' element={<Home/>} />        
         <Route path='/about' element={<About/>} />        
         <Route path='/contact' element={<Contact/>} />        
-
-
+        <Route path='/destination' element={<Destination/>} />
       </Routes>
      </div>
      <Footer />

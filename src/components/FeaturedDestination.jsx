@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Title from "./Title";
+import { NavLink} from "react-router-dom";
 
 const FeaturedDestination = () => {
    const destinos = [
@@ -27,9 +28,9 @@ const FeaturedDestination = () => {
               />
               <div className="p-4">
                 <h4 className="text-xl font-semibold mb-2">{destino.name}</h4>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                <NavLink to={'/destination'} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                   Ver más
-                </button>
+                </NavLink>
               </div>
             </motion.div>
           ))}
