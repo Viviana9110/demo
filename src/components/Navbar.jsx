@@ -99,7 +99,7 @@ const Navbar = () => {
           className={`${isScrolled && "invert"} h-7 transition-all duration-500`}
         />
 
-        <button className="bg-black text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
+        <button className="bg-secondary text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
           {t("navbar.login")}
         </button>
 
@@ -148,7 +148,7 @@ const Navbar = () => {
           </Link>
         ))}
 
-        <button className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
+        <button className="bg-primary text-white px-8 py-2.5 rounded-full transition-all duration-500">
           {t("navbar.login")}
         </button>
 

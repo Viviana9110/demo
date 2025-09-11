@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section className="py-30 bg-gray-50" id="contact">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
           Contáctanos
         </h2>
 
@@ -44,7 +44,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition"
+              className="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-secondary transition"
             >
               Enviar mensaje
             </button>

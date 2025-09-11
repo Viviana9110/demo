@@ -3,14 +3,14 @@ import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
-    <div className='bg-[#F6F9FC] text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32'>
+    <div className='bg-four text-white pt-8 px-6 md:px-16 lg:px-24 xl:px-32'>
             <div className='flex flex-wrap justify-between gap-12 md:gap-6'>
                 <div className='max-w-80'>
-                    <img src={assets.logo} alt="logo" className='w-25' />
+                    <img src={assets.logoFooter} alt="logo" className='w-40' />
                     <p className='text-sm'>
                     Discover the world's most extraordinary places to stay, from boutique hotels to luxury villas and private islands.
                     </p>
-                    <div className='flex items-center gap-3 mt-4'>
+                    <div className='flex items-center gap-3 mt-4 text-white'>
                         <img src={assets.instagramIcon} alt="instagram-icon" className='w-6'/>
                         <img src={assets.facebookIcon} alt="facebook-icon" className='w-6'/>
                         <img src={assets.twitterIcon} alt="twitter-icon" className='w-6'/>
@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <p className='font-playfair text-lg text-gray-800'>COMPANY</p>
+                    <p className='font-playfair text-lg text-white'>COMPANY</p>
                     <ul className='mt-3 flex flex-col gap-2 text-sm'>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Careers</a></li>
@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <p className='font-playfair text-lg text-gray-800'>SUPPORT</p>
+                    <p className='font-playfair text-lg text-white'>SUPPORT</p>
                     <ul className='mt-3 flex flex-col gap-2 text-sm'>
                         <li><a href="#">Términos y Condiciones</a></li>
                         <li><a href="#">Política de Privacidad</a></li>

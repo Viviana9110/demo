@@ -14,7 +14,7 @@ export default function About() {
 
         {/* Texto */}
         <div className="md:w-1/2 text-gray-700">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-600">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
             Sobre nosotros
           </h2>
           <p className="text-lg leading-relaxed mb-4">

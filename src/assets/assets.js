@@ -1,4 +1,5 @@
 import logo from './logo.png'
+import logoFooter from './logoFooter.png'
 import searchIcon from './searchIcon.svg'
 import userIcon from './userIcon.svg'
 import calenderIcon from './calenderIcon.svg'
@@ -41,6 +42,7 @@ import totalRevenueIcon from "./totalRevenueIcon.svg";
 
 export const assets = {
     logo,
+    logoFooter,
     searchIcon,
     userIcon,
     calenderIcon,

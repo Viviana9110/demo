@@ -6,6 +6,13 @@
   font-family: Outfit;
 }
 
+@theme {
+  --color-primary: #1B82C2;
+  --color-secondary: #438AAE;
+  --color-third: #EF8224;
+  --color-four: #1D1D1B;
+}
+
 .font-playfair{
   font-family: Playfair !important;
 }

@@ -5,39 +5,19 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1545330785-15356daae141?q=80&w=990&auto=format&fit=crop",
-      title: "Vive Perú, una experiencia única",
-      description: "Descubre Machu Picchu, las maravillas del Cusco y la calidez de su gente. Un destino lleno de historia, cultura y paisajes que te enamorarán. ¡Prepárate para tu próxima aventura en Perú!",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=870&auto=format&fit=crop",
-      title: "Brasil: alegría sin fin",
-      description: "Déjate llevar por la energía de Río de Janeiro, las playas paradisíacas y la selva amazónica. Brasil te espera con su música, color y sabor en cada rincón.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1570299437488-d430e1e677c7?q=80&w=725&auto=format&fit=crop",
-      title: "Cuba: historia y encanto caribeño",
-      description: "Recorre La Habana, sus calles llenas de historia, música y tradición. Disfruta de playas cristalinas y la hospitalidad única del pueblo cubano.",
-    },
-    {
-      image:
-        "https://destinations-cms-testing.s3.amazonaws.com/uploads/645bd8242733860025fd6a24-punta-cana-1.jpeg",
-      title: "Punta Cana: tu paraíso soñado",
-      description: "Arena blanca, mar turquesa y sol todo el año. Vive unas vacaciones inolvidables en el corazón del Caribe con todo incluido para tu confort.",
-    },
+    { image: "https://images.unsplash.com/photo-1545330785-15356daae141?q=80&w=990&auto=format&fit=crop" },
+    { image: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=870&auto=format&fit=crop" },
+    { image: "https://images.unsplash.com/photo-1570299437488-d430e1e677c7?q=80&w=725&auto=format&fit=crop" },
+    { image: "https://destinations-cms-testing.s3.amazonaws.com/uploads/645bd8242733860025fd6a24-punta-cana-1.jpeg" },
   ];
 
   useEffect(() => {
     const totalSlides = slides.length;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % totalSlides);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   useEffect(() => {
     const slider = document.getElementById("slider");
@@ -58,9 +38,8 @@ const Hero = () => {
 
   return (
     <>
-      {/* Hero Section */}
-    
-      <div className="flex flex-col items-center">
+      {/* Slider con formulario encima */}
+      <div className="flex flex-col items-center relative">
         <div className="w-full h-screen overflow-hidden relative">
           <div
             className="flex transition-transform duration-500 ease-in-out h-full"
@@ -68,12 +47,11 @@ const Hero = () => {
           >
             {slides.map((slide, i) => (
               <div key={i} className="w-full h-full flex-shrink-0 relative">
-                {/* Imagen con animación de zoom */}
                 <motion.img
                   key={i + "-img"}
                   src={slide.image}
                   className="w-full h-full object-cover"
-                  alt={slide.title}
+                  alt={`slide-${i}`}
                   initial={{ scale: 1.1, opacity: 0 }}
                   animate={{
                     scale: i === currentIndex ? 1 : 1.05,
@@ -81,37 +59,46 @@ const Hero = () => {
                   }}
                   transition={{ duration: 1 }}
                 />
-
-                {/* Overlay con animación */}
-                {i === currentIndex && (
-                  <motion.div
-                    key={i + "-text"}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
-                    transition={{ duration: 0.8 }}
-                    className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-6"
-                  >
-                    <motion.h3
-                      initial={{ opacity: 0, x: -30 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.2, duration: 0.8 }}
-                      className="text-3xl font-bold"
-                    >
-                      {slide.title}
-                    </motion.h3>
-                    <motion.p
-                      initial={{ opacity: 0, x: 30 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4, duration: 0.8 }}
-                      className="text-lg"
-                    >
-                      {slide.description}
-                    </motion.p>
-                  </motion.div>
-                )}
               </div>
             ))}
+          </div>
+
+          {/* Formulario sobre el slider */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-4xl px-4">
+            <form className="bg-white text-gray-500 rounded-lg px-6 py-4 flex flex-col md:flex-row max-md:items-start gap-4 shadow-lg">
+              <div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                  </svg>
+                  <label htmlFor="destinationInput">Destination</label>
+                </div>
+                <input list="destinations" id="destinationInput" type="text" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" placeholder="Type here" required />
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2">
+                  <label htmlFor="checkIn">Check in</label>
+                </div>
+                <input id="checkIn" type="date" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2">
+                  <label htmlFor="checkOut">Check out</label>
+                </div>
+                <input id="checkOut" type="date" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
+              </div>
+
+              <div className="flex md:flex-col max-md:gap-2 max-md:items-center">
+                <label htmlFor="guests">Guests</label>
+                <input min={1} max={4} id="guests" type="number" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none max-w-16" placeholder="0" />
+              </div>
+
+              <button className="flex items-center justify-center gap-1 rounded-md bg-black py-3 px-4 text-white my-auto cursor-pointer max-md:w-full max-md:py-1">
+                <span>Search</span>
+              </button>
+            </form>
           </div>
         </div>
 
@@ -120,9 +107,7 @@ const Hero = () => {
           {slides.map((_, i) => (
             <span
               key={i}
-              className={`w-3 h-3 rounded-full ${
-                i === 0 ? "bg-black" : "bg-black/20"
-              }`}
+              className={`w-3 h-3 rounded-full ${i === 0 ? "bg-black" : "bg-black/20"}`}
             ></span>
           ))}
         </div>
