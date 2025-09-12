@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import Title from "./Title";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 
 const FeaturedDestination = () => {
   const destinos = [
     {
+      _id: "67f7647c197ac559e4089b",
       name: "Perú",
       image:
         "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -12,6 +13,7 @@ const FeaturedDestination = () => {
         "Descubre Machu Picchu, las maravillas del Cusco y la calidez de su gente.",
     },
     {
+      _id: "67f76452197ac559e4089b",
       name: "Brasil",
       image:
         "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?q=80&w=926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -19,6 +21,7 @@ const FeaturedDestination = () => {
         "La energía de Río de Janeiro, las playas paradisíacas y la selva amazónica.",
     },
     {
+      _id: "67f76406197ac559e4089b",
       name: "Cuba",
       image:
         "https://images.unsplash.com/photo-1500759285222-a95626b934cb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -26,6 +29,7 @@ const FeaturedDestination = () => {
         "Recorre La Habana, sus calles llenas de historia, música y tradición.",
     },
     {
+      _id: "67f763d8197ac559e4089b",
       name: "Punta Cana",
       image:
         "https://images.unsplash.com/photo-1551126892-7cf2e2d9a4d9?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -33,6 +37,8 @@ const FeaturedDestination = () => {
         "Arena blanca, mar turquesa y sol todo el año. ",
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <section
@@ -63,7 +69,7 @@ const FeaturedDestination = () => {
               
               <div className='flex items-center justify-between mt-4'>
                 <p><span className='text-xl text-gray-800'>$</span></p>
-                <NavLink to={"/destination-details"} className='px-4 py-2 text-sm font-medium border border-third rounded hover:bg-third transition-all cursor-pointer'>Reservar</NavLink>
+                <NavLink to={`/destination/${destino._id}`} className='px-4 py-2 text-sm font-medium border border-third rounded hover:bg-third transition-all cursor-pointer'>Reservar</NavLink>
             </div>
             </div>
             
