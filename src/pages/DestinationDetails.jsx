@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { assets, destinosDummyData, facilityIcons, roomCommonData} from '../assets/assets'
+import { assets, destinosDummyData, facilityIcons, roomCommonData, roomsDummyData} from '../assets/assets'
 
 const DestinationDetails = () => {
-    const {id} = useParams()
-    const [destination, setDestination] = useState(null)
+   const {id} = useParams()
+    const [destinos, setDestinos] = useState(null)
     const [mainImage, setMainImage] = useState(null)
 
     useEffect(()=>{
-       const destination = destinosDummyData.find(destination => destination._id === id)
-       destination && setDestination(destination)
-       destination && setMainImage(destination.images[0])
+       const destinos = destinosDummyData.find(destinos => destinos._id === id)
+       destinos && setDestinos(destinos)
+       destinos && setMainImage(destinos.images[0])
     },[])
 
-  return destination && (
-    <div className='py-28 md:py-35 px-4 md:px-16 lg:px-24 xl:px-32'>
+
+  return destinos && (
+     <div className='py-28 md:py-35 px-4 md:px-16 lg:px-24 xl:px-32'>
       {/* Room Details */}
       <div className='flex flex-col md:flex-row items-start md:items-center gap-2'>
         <h1 className='text-3xl md:text-4xl font-playfair'>
-            destino <span className='font-inter text-sm'>Tipo</span></h1>
-        <p className='text-xs font-inter py-1.5 px-3 text-white bg-orange-500 rounded-full'>20% OFF</p>
+            {destinos.destino}</h1>
+        <p className='text-xs font-inter py-1.5 px-3 text-white bg-third rounded-full'>20% OFF</p>
       </div>
 
       {/* Room Raiting */}
@@ -30,7 +31,7 @@ const DestinationDetails = () => {
      {/* Room Address */}
       <div className='flex items-center gap-1 text-gray-500 mt-2'>
         <img src={assets.locationIcon} alt="location-icon" />
-        <span>Direccion</span>
+        <span>Ubicación</span>
       </div>
 
     {/* Room Images */}
@@ -40,7 +41,7 @@ const DestinationDetails = () => {
             className='w-full rounded-xl shadow-lg object-cover'/>
         </div>
         <div className='grid grid-cols-2 gap-4 lg:w-1/2 w-full'>
-            {destination?.images.length > 1 && destination.images.map((image, index)=>(
+            {destinos?.images.length > 1 && destinos.images.map((image, index)=>(
                 <img onClick={()=> setMainImage(image)}
                  key={index} src={image} alt="Room Image" 
                  className={`w-full rounded-xl shadow-md object-cover cursor-pointer ${mainImage === image && 'outline-3 outline-orange-500'}`}/>
@@ -51,9 +52,9 @@ const DestinationDetails = () => {
     {/* Room Highlights */}
     <div className='flex flex-col md:flex-row md:justify-between mt-10'>
         <div className='flex flex-col'>
-            <h1 className='text-3xl md:text-4xl font-playfair'>Experience Luxury Like Never Before</h1>
+            <h1 className='text-3xl md:text-4xl font-playfair'>Una Verdadera Experiencia De Lujo</h1>
             <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
-                {destination.amenities.map((item, index)=>(
+                {destinos.amenities.map((item, index)=>(
                     <div key={index} className='flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100'>
                         <img src={facilityIcons[item]} alt={item} className='w-5 h-5'/>
                         <p className='text-xs'>{item}</p>
@@ -62,7 +63,7 @@ const DestinationDetails = () => {
             </div>
         </div>
          {/* Room Price */}
-        <p className='text-2xl font-medium'>$ /night</p>
+        <p className='text-2xl font-medium'>${destinos.price}</p>
     </div>
 
      {/* CheckIn CheckOut Form */}
@@ -87,12 +88,12 @@ const DestinationDetails = () => {
 
         </div>
 
-        <button type='submit' className='bg-primary hover:bg-primary-dull active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-25 py-3 md:py-4 text-base cursor-pointer'>
+        <button type='submit' className='bg-secondary hover:bg-primary active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-25 py-3 md:py-4 text-base cursor-pointer'>
             Check Availability
         </button>
      </form>
 
-    {/* Common Specifications */}
+     {/* Common Specifications */}
     <div className='mt-25 space-y-4'>
         {roomCommonData.map((spec, index)=>(
             <div key={index} className='flex items-start gap-2'>
@@ -105,22 +106,22 @@ const DestinationDetails = () => {
         ))}
     </div>
 
-    <div className='max-w-3xl border-y border-gray-300 my-15 py-10 text-gray-500'>
-        <p>Guests will be allocated on the ground floor according to availability. You get a comfortable Two bedroom apartment has a true city feeling. The price quoted is for two guest, at the guest slot please mark the number of guests to get the exact price for groups. The Guests will be allocated ground floor according to availability. You get the comfortable two bedroom apartment that has a true city feeling.</p>
+     <div className='max-w-3xl border-y border-gray-300 my-15 py-10 text-gray-500'>
+        <p>Aqui iria una nota importante aclaratoria para todos los viajeros</p>
     </div>
 
     {/* Hosted by  */}
     <div className='flex flex-col items-start gap-4'>
         <div className='flex gap-4'>
-            <img src={room.hotel.owner.image} alt="Host" className='h-14 w-14 md:h-18 md:w-18 rounded-full' />
+            <img src={assets.logo} alt="Host" className='h-14 w-14 md:h-18 md:w-18 rounded-full' />
             <div>
-                <p className='text-lg md:text-xl'>Hosted by {room.hotel.name}</p>
+                <p className='text-lg md:text-xl'>Explore Plus</p>
                 <div className='flex items-center mt-1'>
                     <p className='ml-2'>200+ reviews</p>
                 </div>
             </div>
         </div>
-        <button className='px-6 py-2.5 mt-4 rounded text-white bg-primary hover:bg-primary-dull transition-all cursor-pointer'>Contact Now</button>
+        <button className='px-6 py-2.5 mt-4 rounded text-white bg-secondary hover:bg-primary transition-all cursor-pointer'>Contact Now</button>
     </div>
 
 

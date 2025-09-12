@@ -205,44 +205,44 @@ export const roomsDummyData = [
 // Destinos Dummy Data
 export const destinosDummyData = [
     {
-        "_id": "67f7647c197ac559e4089b96",
+        "_id": "67f7647c197ac559e4089b",
         "destino": "Perú",
         "price": 399,
         "amenities": ["Room Service", "Mountain View", "Pool Access"],
-        "images": [peru],
+        "images": [peru, brasil, cuba, puntacana],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:26:04.013Z",
         "updatedAt": "2025-04-10T06:26:04.013Z",
         "__v": 0
     },
     {
-        "_id": "67f76452197ac559e4089b8e",
+        "_id": "67f76452197ac559e4089b",
         "destino": "Brasil",
         "price": 299,
         "amenities": ["Room Service", "Mountain View", "Pool Access"],
-        "images": [brasil],
+        "images": [brasil, cuba, puntacana, peru],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:25:22.593Z",
         "updatedAt": "2025-04-10T06:25:22.593Z",
         "__v": 0
     },
     {
-        "_id": "67f76406197ac559e4089b82",
+        "_id": "67f76406197ac559e4089b",
         "destino": "Cuba",
         "price": 249,
         "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
-        "images": [cuba],
+        "images": [cuba, puntacana, peru, brasil],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:24:06.285Z",
         "updatedAt": "2025-04-10T06:24:06.285Z",
         "__v": 0
     },
     {
-        "_id": "67f763d8197ac559e4089b7a",
+        "_id": "67f763d8197ac559e4089b",
         "destino": "Punta Cana",
         "price": 199,
         "amenities": ["Free WiFi", "Room Service", "Pool Access"],
-        "images": [puntacana],
+        "images": [puntacana, peru, brasil, cuba],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:23:20.252Z",
         "updatedAt": "2025-04-10T06:23:20.252Z",

@@ -1,3 +1,5 @@
+import { assets } from "../assets/assets";
+
 export default function About() {
   return (
     <section className="py-30 bg-white">
@@ -6,7 +8,7 @@ export default function About() {
         {/* Imagen elegante */}
         <div className="md:w-1/2">
           <img
-            src="https://picsum.photos/600/400?travel"
+            src={assets.logo}
             alt="Sobre nosotros"
             className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
           />
