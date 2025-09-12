@@ -78,13 +78,13 @@ const Navbar = () => {
             key={i}
             to={link.path}
             className={`group flex flex-col gap-0.5 ${
-              isScrolled ? "text-gray-700" : "text-white"
+              isScrolled ? "text-gray-700" : "text-four"
             }`}
           >
             {link.name}
             <div
               className={`${
-                isScrolled ? "bg-gray-700" : "bg-white"
+                isScrolled ? "bg-gray-700" : "bg-four"
               } h-0.5 w-0 group-hover:w-full transition-all duration-300`}
             />
           </Link>

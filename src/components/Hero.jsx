@@ -64,8 +64,27 @@ const Hero = () => {
             ))}
           </div>
 
+          
           {/* Formulario sobre el slider */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-4xl px-4">
+          <motion.h2
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-4xl md:text-5xl text-center text-third font-bold mb-4 drop-shadow-lg"
+        >
+          Descubre tu próximo destino
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="text-lg md:text-2xl text-center text-third mb-6 drop-shadow-md"
+        >
+          Viaja con nosotros a los mejores lugares del mundo
+        </motion.p>
+
             <form className='bg-white text-gray-500 rounded-lg px-6 py-4 mt-8 flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto'>
 
             <div>
