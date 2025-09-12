@@ -224,7 +224,7 @@ export const destinosDummyData = [
         "_id": "67f7647c197ac559e4089b",
         "destino": "Perú",
         "price": 399,
-        "amenities": ["Transporte", "Comidas", "Pool Access"],
+        "amenities": ["Room Service", "Free Breakfast", "Pool Access"],
         "images": [peru, peru1, peru2, peru3],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:26:04.013Z",
