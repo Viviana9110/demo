@@ -30,9 +30,25 @@ import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
 import regImage from './regImage.png'
 import peru from './peru.jpg'
+import peru1 from './peru1.jpg'
+import peru2 from './peru2.jpg'
+import peru3 from './peru3.jpg'
+
 import brasil from './brasil.jpg'
+import brasil1 from './brasil1.jpg'
+import brasil2 from './brasil2.jpg'
+import brasil3 from './brasil3.jpg'
+import brasil4 from './brasil4.jpg'
 import cuba from './cuba.jpg'
+import cuba1 from './cuba1.jpg'
+import cuba2 from './cuba2.jpg'
+import cuba3 from './cuba3.jpg'
+
 import puntacana from './puntacana.jpeg'
+import puntacana1 from './puntacana1.jpg'
+import puntacana2 from './puntacana2.jpg'
+import puntacana3 from './puntacana3.jpg'
+
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.png";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.png";
 import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.png";
@@ -208,8 +224,8 @@ export const destinosDummyData = [
         "_id": "67f7647c197ac559e4089b",
         "destino": "Perú",
         "price": 399,
-        "amenities": ["Transporte", "Comidas", "Entradas"],
-        "images": [peru, brasil, cuba, puntacana],
+        "amenities": ["Transporte", "Comidas", "Pool Access"],
+        "images": [peru, peru1, peru2, peru3],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:26:04.013Z",
         "updatedAt": "2025-04-10T06:26:04.013Z",
@@ -219,8 +235,8 @@ export const destinosDummyData = [
         "_id": "67f76452197ac559e4089b",
         "destino": "Brasil",
         "price": 299,
-        "amenities": ["Transporte", "Comidas", "Entradas"],
-        "images": [brasil, cuba, puntacana, peru],
+        "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        "images": [brasil, brasil1, brasil4, brasil3],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:25:22.593Z",
         "updatedAt": "2025-04-10T06:25:22.593Z",
@@ -230,8 +246,8 @@ export const destinosDummyData = [
         "_id": "67f76406197ac559e4089b",
         "destino": "Cuba",
         "price": 249,
-        "amenities": ["Transporte", "Comidas", "Entradas"],
-        "images": [cuba, puntacana, peru, brasil],
+        "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
+        "images": [cuba, cuba1, cuba2, cuba3],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:24:06.285Z",
         "updatedAt": "2025-04-10T06:24:06.285Z",
@@ -241,8 +257,8 @@ export const destinosDummyData = [
         "_id": "67f763d8197ac559e4089b",
         "destino": "Punta Cana",
         "price": 199,
-        "amenities": ["Transporte", "Comidas", "Entradas"],
-        "images": [puntacana, peru, brasil, cuba],
+        "amenities": ["Free WiFi", "Room Service", "Pool Access"],
+        "images": [puntacana, puntacana1, puntacana2, puntacana3],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:23:20.252Z",
         "updatedAt": "2025-04-10T06:23:20.252Z",
