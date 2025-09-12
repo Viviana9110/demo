@@ -29,6 +29,10 @@ import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
 import regImage from './regImage.png'
+import peru from './peru.jpg'
+import brasil from './brasil.jpg'
+import cuba from './cuba.jpg'
+import puntacana from './puntacana.jpeg'
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.png";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.png";
 import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.png";
@@ -74,6 +78,10 @@ export const assets = {
     uploadArea,
     totalBookingIcon,
     totalRevenueIcon,
+    peru,
+    brasil,
+    puntacana,
+    cuba
 }
 
 export const cities = [
@@ -187,6 +195,54 @@ export const roomsDummyData = [
         "pricePerNight": 199,
         "amenities": ["Free WiFi", "Room Service", "Pool Access"],
         "images": [roomImg4, roomImg1, roomImg2, roomImg3],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:23:20.252Z",
+        "updatedAt": "2025-04-10T06:23:20.252Z",
+        "__v": 0
+    }
+]
+
+// Destinos Dummy Data
+export const destinosDummyData = [
+    {
+        "_id": "67f7647c197ac559e4089b96",
+        "destino": "Perú",
+        "price": 399,
+        "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        "images": [peru],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:26:04.013Z",
+        "updatedAt": "2025-04-10T06:26:04.013Z",
+        "__v": 0
+    },
+    {
+        "_id": "67f76452197ac559e4089b8e",
+        "destino": "Brasil",
+        "price": 299,
+        "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        "images": [brasil],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:25:22.593Z",
+        "updatedAt": "2025-04-10T06:25:22.593Z",
+        "__v": 0
+    },
+    {
+        "_id": "67f76406197ac559e4089b82",
+        "destino": "Cuba",
+        "price": 249,
+        "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
+        "images": [cuba],
+        "isAvailable": true,
+        "createdAt": "2025-04-10T06:24:06.285Z",
+        "updatedAt": "2025-04-10T06:24:06.285Z",
+        "__v": 0
+    },
+    {
+        "_id": "67f763d8197ac559e4089b7a",
+        "destino": "Punta Cana",
+        "price": 199,
+        "amenities": ["Free WiFi", "Room Service", "Pool Access"],
+        "images": [puntacana],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:23:20.252Z",
         "updatedAt": "2025-04-10T06:23:20.252Z",

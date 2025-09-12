@@ -63,7 +63,7 @@ const FeaturedDestination = () => {
               
               <div className='flex items-center justify-between mt-4'>
                 <p><span className='text-xl text-gray-800'>$</span></p>
-                <NavLink to={"/destination"} className='px-4 py-2 text-sm font-medium border border-third rounded hover:bg-third transition-all cursor-pointer'>Reservar</NavLink>
+                <NavLink to={"/destination-details"} className='px-4 py-2 text-sm font-medium border border-third rounded hover:bg-third transition-all cursor-pointer'>Reservar</NavLink>
             </div>
             </div>
             

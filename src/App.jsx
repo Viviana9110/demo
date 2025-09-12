@@ -7,7 +7,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import About from './components/About';
 import Contact from './components/Contact';
 import Destination from './components/Destination';
-
+import DestinationDetails from './pages/DestinationDetails';
 
 const App = () => {
 
@@ -22,6 +22,8 @@ const App = () => {
         <Route path='/about' element={<About/>} />        
         <Route path='/contact' element={<Contact/>} />        
         <Route path='/destination' element={<Destination/>} />
+        <Route path='/destination-details' element={<DestinationDetails/>} />
+
       </Routes>
      </div>
      <Footer />
