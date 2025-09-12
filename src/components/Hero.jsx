@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { assets } from "../assets/assets"
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,40 +66,45 @@ const Hero = () => {
 
           {/* Formulario sobre el slider */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-4xl px-4">
-            <form className="bg-white text-gray-500 rounded-lg px-6 py-4 flex flex-col md:flex-row max-md:items-start gap-4 shadow-lg">
-              <div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-                  </svg>
-                  <label htmlFor="destinationInput">Destination</label>
-                </div>
-                <input list="destinations" id="destinationInput" type="text" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" placeholder="Type here" required />
-              </div>
+            <form className='bg-white text-gray-500 rounded-lg px-6 py-4 mt-8 flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto'>
 
-              <div>
-                <div className="flex items-center gap-2">
-                  <label htmlFor="checkIn">Check in</label>
+            <div>
+                <div className='flex items-center gap-2'>
+                   <img src={assets.calenderIcon} alt="" className='h-4'/>
+                    <label htmlFor="destinationInput">Destination</label>
                 </div>
-                <input id="checkIn" type="date" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
-              </div>
+                <input list='destinations' id="destinationInput" type="text" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" placeholder="Type here" required />
+                <datalist id='destinations'>
+                    
+                </datalist>
+            </div>
 
-              <div>
-                <div className="flex items-center gap-2">
-                  <label htmlFor="checkOut">Check out</label>
+            <div>
+                <div className='flex items-center gap-2'>
+                     <img src={assets.calenderIcon} alt="" className='h-4' />
+                    <label htmlFor="checkIn">Check in</label>
                 </div>
-                <input id="checkOut" type="date" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
-              </div>
+                <input id="checkIn" type="date" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
+            </div>
 
-              <div className="flex md:flex-col max-md:gap-2 max-md:items-center">
+            <div>
+                <div className='flex items-center gap-2'>
+                    <img src={assets.calenderIcon} alt="" className='h-4' />
+                    <label htmlFor="checkOut">Check out</label>
+                </div>
+                <input id="checkOut" type="date" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
+            </div>
+
+            <div className='flex md:flex-col max-md:gap-2 max-md:items-center'>
                 <label htmlFor="guests">Guests</label>
-                <input min={1} max={4} id="guests" type="number" className="rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none max-w-16" placeholder="0" />
-              </div>
+                <input min={1} max={4} id="guests" type="number" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none  max-w-16" placeholder="0" />
+            </div>
 
-              <button className="flex items-center justify-center gap-1 rounded-md bg-black py-3 px-4 text-white my-auto cursor-pointer max-md:w-full max-md:py-1">
+            <button className='flex items-center justify-center gap-1 rounded-md bg-black py-3 px-4 text-white my-auto cursor-pointer max-md:w-full max-md:py-1' >
+            <img src={assets.searchIcon} alt="searchIcon" className='h-7' />
                 <span>Search</span>
-              </button>
-            </form>
+            </button>
+        </form>
           </div>
         </div>
 
